@@ -1,0 +1,250 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram name="Network Architecture" id="network-arch">
+    <mxGraphModel dx="1216" dy="808" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Network Architecture" vertex="1">
+          <mxGeometry height="40" width="600" x="295" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="internet" parent="1" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" value="Internet&#xa;WAN" vertex="1">
+          <mxGeometry height="100" width="160" x="515" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="router" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;align=center;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="180" x="500" y="252.5" as="geometry" />
+        </mxCell>
+        <mxCell id="wan-int" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="WAN&lt;br&gt;eth0: Public IP" vertex="1">
+          <mxGeometry height="50" width="85" x="547.5" y="195" as="geometry" />
+        </mxCell>
+        <mxCell id="trunk-int" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;TRUNK&lt;br&gt;eth1: LAN + VLAN 10 (LAB) 192.168.1.1 / 10.10.10.1&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="510" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="wan-conn" edge="1" parent="1" source="wan-int" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#0066CC;entryX=0.481;entryY=0.94;entryDx=0;entryDy=0;entryPerimeter=0;" target="internet" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lan-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" value="LAN Network (VLAN 1)" vertex="1">
+          <mxGeometry height="30" width="200" x="190" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="switch" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;fontStyle=1" value="8-Port Managed Switch" vertex="1">
+          <mxGeometry height="20" width="135" x="500" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="switch-ports-bg" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="" vertex="1">
+          <mxGeometry height="80" width="210" x="500" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="port1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9" value="P1" vertex="1">
+          <mxGeometry height="30" width="20" x="505" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="port2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9" value="P2" vertex="1">
+          <mxGeometry height="30" width="20" x="530" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="port3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9" value="P3" vertex="1">
+          <mxGeometry height="30" width="20" x="555" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="port4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=9" value="P4" vertex="1">
+          <mxGeometry height="30" width="20" x="580" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="port5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9" value="P5" vertex="1">
+          <mxGeometry height="30" width="20" x="610" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="port6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9" value="P6" vertex="1">
+          <mxGeometry height="30" width="20" x="635" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="port7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=9" value="P7" vertex="1">
+          <mxGeometry height="30" width="20" x="660" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="port8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=9;fontStyle=1" value="P8&#xa;T" vertex="1">
+          <mxGeometry height="30" width="20" x="685" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="vlan0-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" value="VLAN 1 (LAN)&lt;br&gt;P1 - P8 Untagged" vertex="1">
+          <mxGeometry height="25" width="70" x="515" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="vlan10-label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" value="&lt;font&gt;VLAN 10 (LAB)&lt;br&gt;P5 - P7 Untagged&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="70" x="610" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="wifi-ap" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11" value="WiFi AP" vertex="1">
+          <mxGeometry height="47.5" width="80" x="250" y="512.5" as="geometry" />
+        </mxCell>
+        <mxCell id="pc1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="PC 1" vertex="1">
+          <mxGeometry height="40" width="60" x="250" y="575" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="Mobile&lt;br&gt;Device(s)" vertex="1">
+          <mxGeometry height="50" width="60" x="130" y="582.5" as="geometry" />
+        </mxCell>
+        <mxCell id="sw-ap" edge="1" parent="1" source="port1" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#82b366;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="wifi-ap" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sw-pc1" edge="1" parent="1" source="port2" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#82b366;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="pc1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ap-mobile" edge="1" parent="1" source="wifi-ap" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#9673a6;dashed=1;" target="mobile" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lab-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" value="LAB Network (VLAN 10) - 3-Node Proxmox Cluster w/Ceph" vertex="1">
+          <mxGeometry height="30" width="350" x="780" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="node1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#d6b656;fontSize=9" value="Proxmox Node 1 - Master&lt;br&gt;nic1: VLAN 10 - 10.10.10.10&lt;br&gt;nic2/nic3: OpenFabric 10.12.12.250" vertex="1">
+          <mxGeometry height="80" width="120" x="850" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="node2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9" value="Proxmox Node 2&lt;br&gt;nic1: VLAN 10 - 10.10.10.11&lt;br&gt;nic2/nic3: OpenFabric 10.12.12.251" vertex="1">
+          <mxGeometry height="80" width="120" x="1010" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="node3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=9" value="Proxmox Node 3&lt;br&gt;nic1: VLAN 10 - 10.10.10.12&lt;br&gt;nic2/nic3: OpenFabric 10.12.12.252" vertex="1">
+          <mxGeometry height="80" width="120" x="930" y="632.5" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-node2" edge="1" parent="1" source="port6" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#9673a6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.564;entryY=1.029;entryDx=0;entryDy=0;entryPerimeter=0;" target="node2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="790" />
+            </Array>
+            <mxPoint x="650" y="520" as="sourcePoint" />
+            <mxPoint x="1010" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cluster-node3" edge="1" parent="1" source="port5" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#9673a6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="node3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="705" y="543" as="sourcePoint" />
+            <mxPoint x="905" y="607" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node1-node2" edge="1" parent="1" source="node1" style="endArrow=classic;startArrow=none;html=1;strokeWidth=2;strokeColor=#FF9900;dashed=1;fontSize=8;" target="node2" value="nic2 → nic3">
+          <mxGeometry height="50" relative="1" width="50" x="0.1" y="-10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node2-node3" edge="1" parent="1" source="node2" style="endArrow=classic;startArrow=none;html=1;strokeWidth=2;strokeColor=#FF9900;dashed=1;fontSize=8;" target="node3" value="nic2 → nic3">
+          <mxGeometry height="50" relative="1" width="50" x="0.1" y="10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node3-node1" edge="1" parent="1" source="node3" style="endArrow=classic;startArrow=none;html=1;strokeWidth=2;strokeColor=#FF9900;dashed=1;fontSize=8;" target="node1" value="nic2 → nic3">
+          <mxGeometry height="50" relative="1" width="50" x="0.1" y="10" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="openfabric-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff4e6;strokeColor=#FF9900;align=left;verticalAlign=top;dashed=1;" value="" vertex="1">
+          <mxGeometry height="140" width="165" x="695" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="openfabric-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" value="OpenFabric Mesh" vertex="1">
+          <mxGeometry height="20" width="160" x="695" y="665" as="geometry" />
+        </mxCell>
+        <mxCell id="openfabric-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8;" value="Isolated 25 Gbps Layer 2 Fabric&lt;div&gt;&lt;span style=&quot;font-size: 9px;&quot;&gt;10.12.12.0/24 (lab-mesh)&lt;/span&gt;&lt;br&gt;&lt;br&gt;Triangle Topology:&lt;br&gt;• Node 1 nic2 → Node 2 nic3&lt;br&gt;• Node 2 nic2 → Node 3 nic3&lt;br&gt;• Node 3 nic2 → Node 1 nic3&lt;br&gt;&lt;br&gt;High-speed interconnect&lt;br&gt;for cluster communication&lt;/div&gt;" vertex="1">
+          <mxGeometry height="85" width="140" x="705" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;dashed=1;" value="" vertex="1">
+          <mxGeometry height="278.75" width="265" x="822.5" y="80.61999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" value="Connection Types &amp; Networks" vertex="1">
+          <mxGeometry height="25" width="230" x="840" y="87.49999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-wan" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#0066CC;" value="WAN (Internet)">
+          <mxGeometry height="50" relative="1" width="50" x="-0.05" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="872.5" y="125.61999999999999" as="sourcePoint" />
+            <mxPoint x="932.5" y="125.61999999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-trunk" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=3;strokeColor=#FF6600;" value="802.1Q Trunk (Tagged)">
+          <mxGeometry height="50" relative="1" width="50" x="-0.05" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="872.5" y="150.62" as="sourcePoint" />
+            <mxPoint x="932.5" y="150.62" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-lan" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#82b366;" value="VLAN 1 - LAN (Untagged)">
+          <mxGeometry height="50" relative="1" width="50" x="-0.05" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="872.5" y="175.62" as="sourcePoint" />
+            <mxPoint x="932.5" y="175.62" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-lab" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#9673a6;" value="VLAN 10 - LAB (Untagged)">
+          <mxGeometry height="50" relative="1" width="50" x="-0.05" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="872.5" y="200.62" as="sourcePoint" />
+            <mxPoint x="932.5" y="200.62" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-wifi" edge="1" parent="1" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#9673a6;dashed=1;" value="WiFi (Wireless)">
+          <mxGeometry height="50" relative="1" width="50" x="-0.05" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="872.5" y="225.62" as="sourcePoint" />
+            <mxPoint x="932.5" y="225.62" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-cluster" edge="1" parent="1" style="endArrow=classic;startArrow=none;html=1;strokeWidth=2;strokeColor=#FF9900;dashed=1;" value="OpenFabric Mesh (nic2↔nic3)">
+          <mxGeometry height="50" relative="1" width="50" x="-0.05" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="872.5" y="250.62" as="sourcePoint" />
+            <mxPoint x="932.5" y="250.62" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-networks-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1" value="Networks:" vertex="1">
+          <mxGeometry height="15" width="210" x="847.5" y="279.37" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-networks-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;• WAN: Public Internet&lt;br&gt;• VLAN 1: 192.168.1.0/24 (LAN)&lt;br&gt;• VLAN 10: 10.10.10.0/24 (LAB)&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;• OpenFabric Mesh: 10.12.12.0/24 (lab-mesh)&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="35" width="210" x="847.5" y="294.37" as="geometry" />
+        </mxCell>
+        <mxCell id="notes-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;verticalAlign=top;" value="" vertex="1">
+          <mxGeometry height="295" width="240" x="160" y="72.5" as="geometry" />
+        </mxCell>
+        <mxCell id="notes-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" value="Network Configuration" vertex="1">
+          <mxGeometry height="25" width="240" x="160" y="77.5" as="geometry" />
+        </mxCell>
+        <mxCell id="notes-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;WAN: Public IP (from ISP)&lt;br&gt;&lt;br&gt;VLAN 1 (Default/LAN): 192.168.1.0/24&lt;br&gt;  - Gateway: 192.168.1.1 (pfSense)&lt;br&gt;  - Switch Ports: 1-8 (untagged)&lt;br&gt;  - Devices: WiFi AP, PCs, 3D Printer, mobile&lt;br&gt;&lt;br&gt;VLAN 10 (LAB): 10.10.10.0/24&lt;br&gt;  - Gateway: 10.10.10.1 (pfSense)&lt;br&gt;  - Untagged Switch Ports: 5-7&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;- Tagged Switch Port: 8&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;  - Cluster Nodes nic1: 10.10.10.10-12&lt;br&gt;&lt;br&gt;OpenFabric Mesh (Isolated): 10.12.12.0/24&lt;br&gt;  - Cluster nodes nic2/nic3 only&lt;br&gt;  - Direct node-to-node connections&lt;br&gt;&lt;br&gt;Switch Port 8: Trunk to pfSense&lt;br&gt;  - Tagged: VLAN 10 (+ Untagged default VLAN 1)&lt;br&gt;  - 802.1Q VLAN tagging enabled&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="230" x="170" y="97.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vlan-config-box" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=top;" value="" vertex="1">
+          <mxGeometry height="200" width="210" x="340" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="vlan-config-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" value="Switch VLAN Configuration" vertex="1">
+          <mxGeometry height="25" width="220" x="340" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="vlan-config-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9;" value="Port 1-8: VLAN 1 (untagged)&lt;br&gt;  Access mode - LAN devices&lt;br&gt;&lt;br&gt;Port 5-7: VLAN 10 (untagged)&lt;br&gt;  Access mode - Cluster nodes nic1&lt;br&gt;&lt;br&gt;Port 8: TRUNK (tagged VLAN 10)&lt;br&gt;  802.1Q trunk mode&lt;br&gt;  Carries VLAN 1 + VLAN 10&lt;br&gt;  Connects to pfSense router on eth1&lt;br&gt;&lt;br&gt;Note: Cluster nodes also have&lt;br&gt;nic2/nic3 for OpenFabric mesh" vertex="1">
+          <mxGeometry height="135" width="200" x="350" y="685" as="geometry" />
+        </mxCell>
+        <mxCell id="mKqfbtz7ATL3Xap5xv3U-2" parent="1" style="strokeColor=#ffffff;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.routers.router;" value="" vertex="1">
+          <mxGeometry height="58" width="85" x="635" y="233.25" as="geometry" />
+        </mxCell>
+        <mxCell id="mKqfbtz7ATL3Xap5xv3U-5" parent="1" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/switch/Switch_24_port_L2.svg;" value="" vertex="1">
+          <mxGeometry height="95" width="138.59" x="534.12" y="545" as="geometry" />
+        </mxCell>
+        <mxCell id="cluster-node1" edge="1" parent="1" source="port7" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#9673a6;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="node1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="720" y="620" as="sourcePoint" />
+            <mxPoint x="855" y="498" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mKqfbtz7ATL3Xap5xv3U-10" edge="1" parent="1" source="trunk-int" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=3;strokeColor=#FF6600;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="port8" value="">
+          <mxGeometry height="50" relative="1" width="50" x="-0.05" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="695" y="420" />
+            </Array>
+            <mxPoint x="695" y="360" as="sourcePoint" />
+            <mxPoint x="770" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mKqfbtz7ATL3Xap5xv3U-11" connectable="0" parent="mKqfbtz7ATL3Xap5xv3U-10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;Switch Port 8&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 12px; color: rgb(0, 0, 0);&quot;&gt;802.1Q Trunk&lt;br&gt;Tagged VLAN 10&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0264" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mKqfbtz7ATL3Xap5xv3U-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="3D Printer" vertex="1">
+          <mxGeometry height="40" width="60" x="250" y="632.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mKqfbtz7ATL3Xap5xv3U-17" edge="1" parent="1" source="port3" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#82b366;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="mKqfbtz7ATL3Xap5xv3U-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="540" />
+            </Array>
+            <mxPoint x="695" y="560" as="sourcePoint" />
+            <mxPoint x="470" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mKqfbtz7ATL3Xap5xv3U-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;pfSense Router&lt;/font&gt;&lt;/b&gt;&lt;div&gt;- Stateful Firewall&amp;nbsp;&lt;/div&gt;&lt;div&gt;- DNS Server&lt;/div&gt;&lt;div&gt;- DHCP for LAN subnet&lt;/div&gt;&lt;div&gt;- DHCP for LAB subnet&lt;/div&gt;" vertex="1">
+          <mxGeometry height="58.75" width="145" x="517.5" y="263.13" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
